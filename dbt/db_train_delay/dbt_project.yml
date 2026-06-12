@@ -1,0 +1,20 @@
+name: db_train_delay
+version: "1.0.0"
+config-version: 2
+
+profile: db_train_delay
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  db_train_delay:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+

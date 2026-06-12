@@ -1,0 +1,26 @@
+stations:
+  - station_id: "8000244"
+    name: Mannheim Hbf
+    city: Mannheim
+  - station_id: "8000156"
+    name: Heidelberg Hbf
+    city: Heidelberg
+  - station_id: "8000105"
+    name: Frankfurt Main Hbf
+    city: Frankfurt
+  - station_id: "8011160"
+    name: Berlin Hbf
+    city: Berlin
+  - station_id: "8000261"
+    name: München Hbf
+    city: Munich
+  - station_id: "8002549"
+    name: Hamburg Hbf
+    city: Hamburg
+  - station_id: "8000191"
+    name: Karlsruhe Hbf
+    city: Karlsruhe
+  - station_id: "8000207"
+    name: Köln Hbf
+    city: Cologne
+

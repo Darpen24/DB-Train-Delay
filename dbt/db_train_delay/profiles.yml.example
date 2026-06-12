@@ -1,0 +1,16 @@
+db_train_delay:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../../data/local/db_train_delay.duckdb
+      schema: main
+    athena:
+      type: athena
+      s3_staging_dir: s3://YOUR_BUCKET/athena-results/
+      s3_data_dir: s3://YOUR_BUCKET/gold/
+      region_name: eu-central-1
+      schema: db_train_delay
+      database: awsdatacatalog
+      work_group: db-train-delay
+

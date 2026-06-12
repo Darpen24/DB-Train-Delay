@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: silver
+    description: Cleaned train events from the silver lakehouse layer.
+    tables:
+      - name: train_events
+        columns:
+          - name: route_id
+            tests:
+              - not_null
+          - name: planned_departure
+            tests:
+              - not_null
+

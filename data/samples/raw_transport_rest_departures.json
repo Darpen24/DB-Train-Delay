@@ -1,0 +1,94 @@
+[
+  {
+    "route_id": "mannheim_heidelberg",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Heidelberg Hbf",
+    "train_name": "RE 73",
+    "train_category": "RE",
+    "planned_departure": "2026-06-01T07:05:00+02:00",
+    "actual_departure": "2026-06-01T07:09:00+02:00",
+    "planned_platform": "9",
+    "actual_platform": "9",
+    "cancelled": false
+  },
+  {
+    "route_id": "mannheim_heidelberg",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Heidelberg Hbf",
+    "train_name": "S 3",
+    "train_category": "S",
+    "planned_departure": "2026-06-01T08:12:00+02:00",
+    "actual_departure": "2026-06-01T08:12:00+02:00",
+    "planned_platform": "10",
+    "actual_platform": "10",
+    "cancelled": false
+  },
+  {
+    "route_id": "mannheim_frankfurt",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Frankfurt Main Hbf",
+    "train_name": "ICE 770",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-02T08:32:00+02:00",
+    "actual_departure": "2026-06-02T08:45:00+02:00",
+    "planned_platform": "3",
+    "actual_platform": "4",
+    "cancelled": false
+  },
+  {
+    "route_id": "mannheim_berlin",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Berlin Hbf",
+    "train_name": "ICE 372",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-03T09:36:00+02:00",
+    "actual_departure": "2026-06-03T10:02:00+02:00",
+    "planned_platform": "2",
+    "actual_platform": "2",
+    "cancelled": false
+  },
+  {
+    "route_id": "munich_hamburg",
+    "station_id": "8000261",
+    "station_name": "München Hbf",
+    "destination_name": "Hamburg Hbf",
+    "train_name": "ICE 588",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-04T06:18:00+02:00",
+    "actual_departure": null,
+    "planned_platform": "19",
+    "actual_platform": null,
+    "cancelled": true
+  },
+  {
+    "route_id": "heidelberg_karlsruhe",
+    "station_id": "8000156",
+    "station_name": "Heidelberg Hbf",
+    "destination_name": "Karlsruhe Hbf",
+    "train_name": "RE 17",
+    "train_category": "RE",
+    "planned_departure": "2026-06-07T17:21:00+02:00",
+    "actual_departure": "2026-06-07T17:29:00+02:00",
+    "planned_platform": "6",
+    "actual_platform": "7",
+    "cancelled": false
+  },
+  {
+    "route_id": "frankfurt_cologne",
+    "station_id": "8000105",
+    "station_name": "Frankfurt Main Hbf",
+    "destination_name": "Köln Hbf",
+    "train_name": "ICE 1020",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-08T18:09:00+02:00",
+    "actual_departure": "2026-06-08T18:14:00+02:00",
+    "planned_platform": "7",
+    "actual_platform": "7",
+    "cancelled": false
+  }
+]
+

@@ -1,0 +1,50 @@
+routes:
+  - route_id: mannheim_heidelberg
+    origin_station_id: "8000244"
+    origin_name: Mannheim Hbf
+    destination_station_id: "8000156"
+    destination_name: Heidelberg Hbf
+    route_type: short
+    train_category_focus: RE/RB/S
+    distance_km: 21
+  - route_id: mannheim_frankfurt
+    origin_station_id: "8000244"
+    origin_name: Mannheim Hbf
+    destination_station_id: "8000105"
+    destination_name: Frankfurt Main Hbf
+    route_type: medium
+    train_category_focus: ICE/IC/RE
+    distance_km: 72
+  - route_id: mannheim_berlin
+    origin_station_id: "8000244"
+    origin_name: Mannheim Hbf
+    destination_station_id: "8011160"
+    destination_name: Berlin Hbf
+    route_type: long
+    train_category_focus: ICE
+    distance_km: 624
+  - route_id: munich_hamburg
+    origin_station_id: "8000261"
+    origin_name: München Hbf
+    destination_station_id: "8002549"
+    destination_name: Hamburg Hbf
+    route_type: long
+    train_category_focus: ICE
+    distance_km: 775
+  - route_id: heidelberg_karlsruhe
+    origin_station_id: "8000156"
+    origin_name: Heidelberg Hbf
+    destination_station_id: "8000191"
+    destination_name: Karlsruhe Hbf
+    route_type: regional
+    train_category_focus: RE/RB/S
+    distance_km: 55
+  - route_id: frankfurt_cologne
+    origin_station_id: "8000105"
+    origin_name: Frankfurt Main Hbf
+    destination_station_id: "8000207"
+    destination_name: Köln Hbf
+    route_type: ice
+    train_category_focus: ICE
+    distance_km: 180
+

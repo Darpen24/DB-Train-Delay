@@ -1,0 +1,21 @@
+select
+    route_id,
+    station_id,
+    station_name,
+    destination_name,
+    train_name,
+    train_category,
+    cast(planned_departure as timestamp) as planned_departure,
+    cast(actual_departure as timestamp) as actual_departure,
+    planned_platform,
+    actual_platform,
+    cast(cancelled as boolean) as cancelled,
+    cast(delay_minutes as double) as delay_minutes,
+    cast(is_delayed as boolean) as is_delayed,
+    cast(platform_changed as boolean) as platform_changed,
+    service_date,
+    weekday,
+    cast(is_weekend as boolean) as is_weekend,
+    day_part
+from {{ source('silver', 'train_events') }}
+

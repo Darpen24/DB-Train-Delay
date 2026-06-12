@@ -1,0 +1,8 @@
+route_id,origin_name,destination_name,route_type,train_category_focus,distance_km
+mannheim_heidelberg,Mannheim Hbf,Heidelberg Hbf,short,RE/RB/S,21
+mannheim_frankfurt,Mannheim Hbf,Frankfurt Main Hbf,medium,ICE/IC/RE,72
+mannheim_berlin,Mannheim Hbf,Berlin Hbf,long,ICE,624
+munich_hamburg,München Hbf,Hamburg Hbf,long,ICE,775
+heidelberg_karlsruhe,Heidelberg Hbf,Karlsruhe Hbf,regional,RE/RB/S,55
+frankfurt_cologne,Frankfurt Main Hbf,Köln Hbf,ice,ICE,180
+

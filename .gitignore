@@ -15,4 +15,4 @@ data/gold/
 dbt/db_train_delay/target/
 dbt/db_train_delay/dbt_packages/
 logs/
-
+outputs/

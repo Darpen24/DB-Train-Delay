@@ -6,7 +6,6 @@ from datetime import datetime
 from pathlib import Path
 from statistics import mean, median
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RAW_SAMPLE = PROJECT_ROOT / "data" / "samples" / "raw_transport_rest_departures.json"
 ROUTES_CSV = PROJECT_ROOT / "dbt" / "db_train_delay" / "seeds" / "routes.csv"
@@ -31,7 +30,11 @@ def main() -> None:
     for event in events:
         planned = parse_ts(event["planned_departure"])
         actual = parse_ts(event["actual_departure"])
-        delay = None if event["cancelled"] or not actual else (actual - planned).total_seconds() / 60
+        delay = (
+            None
+            if event["cancelled"] or not actual
+            else (actual - planned).total_seconds() / 60
+        )
         enriched.append(
             {
                 **event,
@@ -49,7 +52,11 @@ def main() -> None:
         route_events = [event for event in enriched if event["route_id"] == route_id]
         if not route_events:
             continue
-        delays = [event["delay_minutes"] for event in route_events if event["delay_minutes"] is not None]
+        delays = [
+            event["delay_minutes"]
+            for event in route_events
+            if event["delay_minutes"] is not None
+        ]
         event_count = len(route_events)
         delayed_events = sum(event["is_delayed"] for event in route_events)
         cancellations = sum(event["cancelled"] for event in route_events)
@@ -97,4 +104,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

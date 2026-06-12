@@ -1,6 +1,8 @@
 import pandas as pd
-
-from db_train_delay.pipelines.local_pipeline import build_gold_route_reliability, build_silver_events
+from db_train_delay.pipelines.local_pipeline import (
+    build_gold_route_reliability,
+    build_silver_events,
+)
 
 
 def test_silver_events_calculates_delay_and_flags_platform_change():

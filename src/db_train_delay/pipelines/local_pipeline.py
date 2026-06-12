@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 
 import pandas as pd
-
 from db_train_delay.utils.paths import LOCAL_DATA_DIR, PROJECT_ROOT, SAMPLE_DATA_DIR
 
 

@@ -25,7 +25,7 @@ routes:
     distance_km: 624
   - route_id: munich_hamburg
     origin_station_id: "8000261"
-    origin_name: München Hbf
+    origin_name: Munich Hbf
     destination_station_id: "8002549"
     destination_name: Hamburg Hbf
     route_type: long
@@ -43,8 +43,7 @@ routes:
     origin_station_id: "8000105"
     origin_name: Frankfurt Main Hbf
     destination_station_id: "8000207"
-    destination_name: Köln Hbf
+    destination_name: Cologne Hbf
     route_type: ice
     train_category_focus: ICE
     distance_km: 180
-

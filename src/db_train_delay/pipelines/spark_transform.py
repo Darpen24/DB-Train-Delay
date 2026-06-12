@@ -15,14 +15,20 @@ def build_silver_events(raw_events: DataFrame) -> DataFrame:
         .withColumn(
             "delay_minutes",
             f.when(f.col("cancelled"), None).otherwise(
-                (f.col("actual_departure_ts").cast("long") - f.col("planned_departure_ts").cast("long"))
-                / 60
+                (
+                    f.col("actual_departure_ts").cast("long")
+                    - f.col("planned_departure_ts").cast("long")
+                )
+                / 60,
             ),
         )
         .withColumn("is_delayed", f.coalesce(f.col("delay_minutes"), f.lit(0)) >= f.lit(5))
         .withColumn(
             "platform_changed",
-            (f.coalesce(f.col("planned_platform"), f.lit("")) != f.coalesce(f.col("actual_platform"), f.lit("")))
+            (
+                f.coalesce(f.col("planned_platform"), f.lit(""))
+                != f.coalesce(f.col("actual_platform"), f.lit(""))
+            )
             & ~f.col("cancelled"),
         )
         .withColumn("service_date", f.to_date("planned_departure_ts"))
@@ -50,12 +56,25 @@ def build_route_reliability(silver_events: DataFrame, routes: DataFrame) -> Data
             f.sum(f.col("cancelled").cast("int")).alias("cancellations"),
             f.sum(f.col("platform_changed").cast("int")).alias("platform_changes"),
         )
-        .withColumn("delay_frequency_pct", f.round(f.col("delayed_events") / f.col("event_count") * 100, 2))
-        .withColumn("cancellation_rate_pct", f.round(f.col("cancellations") / f.col("event_count") * 100, 2))
+        .withColumn(
+            "delay_frequency_pct",
+            f.round(f.col("delayed_events") / f.col("event_count") * 100, 2),
+        )
+        .withColumn(
+            "cancellation_rate_pct",
+            f.round(f.col("cancellations") / f.col("event_count") * 100, 2),
+        )
         .withColumn(
             "platform_change_rate_pct",
             f.round(f.col("platform_changes") / f.col("event_count") * 100, 2),
         )
-        .withColumn("delay_per_100_km", f.round(f.coalesce(f.col("avg_delay_minutes"), f.lit(0)) / f.col("distance_km") * 100, 2))
+        .withColumn(
+            "delay_per_100_km",
+            f.round(
+                f.coalesce(f.col("avg_delay_minutes"), f.lit(0))
+                / f.col("distance_km")
+                * 100,
+                2,
+            ),
+        )
     )
-

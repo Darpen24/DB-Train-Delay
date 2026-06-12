@@ -12,7 +12,7 @@ stations:
     name: Berlin Hbf
     city: Berlin
   - station_id: "8000261"
-    name: München Hbf
+    name: Munich Hbf
     city: Munich
   - station_id: "8002549"
     name: Hamburg Hbf
@@ -21,6 +21,5 @@ stations:
     name: Karlsruhe Hbf
     city: Karlsruhe
   - station_id: "8000207"
-    name: Köln Hbf
+    name: Cologne Hbf
     city: Cologne
-

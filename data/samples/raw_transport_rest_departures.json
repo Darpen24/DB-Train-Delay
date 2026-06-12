@@ -54,7 +54,7 @@
   {
     "route_id": "munich_hamburg",
     "station_id": "8000261",
-    "station_name": "München Hbf",
+    "station_name": "Munich Hbf",
     "destination_name": "Hamburg Hbf",
     "train_name": "ICE 588",
     "train_category": "ICE",
@@ -81,7 +81,7 @@
     "route_id": "frankfurt_cologne",
     "station_id": "8000105",
     "station_name": "Frankfurt Main Hbf",
-    "destination_name": "Köln Hbf",
+    "destination_name": "Cologne Hbf",
     "train_name": "ICE 1020",
     "train_category": "ICE",
     "planned_departure": "2026-06-08T18:09:00+02:00",
@@ -91,4 +91,3 @@
     "cancelled": false
   }
 ]
-

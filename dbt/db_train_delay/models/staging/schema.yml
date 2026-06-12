@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_train_events
+    description: Typed train departure events enriched with delay and operational flags.
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: route_id
+        tests:
+          - not_null
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["transport.rest", "db_timetables_api"]
+      - name: delay_minutes
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              inclusive: true

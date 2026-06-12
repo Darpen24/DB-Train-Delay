@@ -1,4 +1,5 @@
 select
+    event_id,
     route_id,
     station_id,
     station_name,
@@ -9,6 +10,8 @@ select
     cast(actual_departure as timestamp) as actual_departure,
     planned_platform,
     actual_platform,
+    cast(ingested_at as timestamp) as ingested_at,
+    source,
     cast(cancelled as boolean) as cancelled,
     cast(delay_minutes as double) as delay_minutes,
     cast(is_delayed as boolean) as is_delayed,
@@ -18,4 +21,3 @@ select
     cast(is_weekend as boolean) as is_weekend,
     day_part
 from {{ source('silver', 'train_events') }}
-

@@ -10,7 +10,9 @@
     "actual_departure": "2026-06-01T07:09:00+02:00",
     "planned_platform": "9",
     "actual_platform": "9",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-01T07:10:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "mannheim_heidelberg",
@@ -23,7 +25,39 @@
     "actual_departure": "2026-06-01T08:12:00+02:00",
     "planned_platform": "10",
     "actual_platform": "10",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-01T08:14:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_heidelberg",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Heidelberg Hbf",
+    "train_name": "RE 72",
+    "train_category": "RE",
+    "planned_departure": "2026-06-06T10:05:00+02:00",
+    "actual_departure": "2026-06-06T10:11:00+02:00",
+    "planned_platform": "8",
+    "actual_platform": "8",
+    "cancelled": false,
+    "ingested_at": "2026-06-06T10:12:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_heidelberg",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Heidelberg Hbf",
+    "train_name": "S 4",
+    "train_category": "S",
+    "planned_departure": "2026-06-08T18:20:00+02:00",
+    "actual_departure": "2026-06-08T18:22:00+02:00",
+    "planned_platform": "10",
+    "actual_platform": "11",
+    "cancelled": false,
+    "ingested_at": "2026-06-08T18:23:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "mannheim_frankfurt",
@@ -36,7 +70,39 @@
     "actual_departure": "2026-06-02T08:45:00+02:00",
     "planned_platform": "3",
     "actual_platform": "4",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-02T08:46:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_frankfurt",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Frankfurt Main Hbf",
+    "train_name": "ICE 772",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-05T09:32:00+02:00",
+    "actual_departure": "2026-06-05T09:41:00+02:00",
+    "planned_platform": "4",
+    "actual_platform": "4",
+    "cancelled": false,
+    "ingested_at": "2026-06-05T09:42:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_frankfurt",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Frankfurt Main Hbf",
+    "train_name": "ICE 774",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-10T17:32:00+02:00",
+    "actual_departure": null,
+    "planned_platform": "3",
+    "actual_platform": null,
+    "cancelled": true,
+    "ingested_at": "2026-06-10T17:35:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "mannheim_berlin",
@@ -49,7 +115,39 @@
     "actual_departure": "2026-06-03T10:02:00+02:00",
     "planned_platform": "2",
     "actual_platform": "2",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-03T10:03:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_berlin",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Berlin Hbf",
+    "train_name": "ICE 370",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-07T15:36:00+02:00",
+    "actual_departure": "2026-06-07T15:54:00+02:00",
+    "planned_platform": "2",
+    "actual_platform": "2",
+    "cancelled": false,
+    "ingested_at": "2026-06-07T15:55:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "mannheim_berlin",
+    "station_id": "8000244",
+    "station_name": "Mannheim Hbf",
+    "destination_name": "Berlin Hbf",
+    "train_name": "ICE 376",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-11T06:36:00+02:00",
+    "actual_departure": "2026-06-11T06:41:00+02:00",
+    "planned_platform": "1",
+    "actual_platform": "1",
+    "cancelled": false,
+    "ingested_at": "2026-06-11T06:42:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "munich_hamburg",
@@ -62,7 +160,24 @@
     "actual_departure": null,
     "planned_platform": "19",
     "actual_platform": null,
-    "cancelled": true
+    "cancelled": true,
+    "ingested_at": "2026-06-04T06:20:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "munich_hamburg",
+    "station_id": "8000261",
+    "station_name": "Munich Hbf",
+    "destination_name": "Hamburg Hbf",
+    "train_name": "ICE 786",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-09T07:18:00+02:00",
+    "actual_departure": "2026-06-09T07:30:00+02:00",
+    "planned_platform": "18",
+    "actual_platform": "18",
+    "cancelled": false,
+    "ingested_at": "2026-06-09T07:31:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "heidelberg_karlsruhe",
@@ -75,7 +190,39 @@
     "actual_departure": "2026-06-07T17:29:00+02:00",
     "planned_platform": "6",
     "actual_platform": "7",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-07T17:30:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "heidelberg_karlsruhe",
+    "station_id": "8000156",
+    "station_name": "Heidelberg Hbf",
+    "destination_name": "Karlsruhe Hbf",
+    "train_name": "RB 65",
+    "train_category": "RB",
+    "planned_departure": "2026-06-08T06:50:00+02:00",
+    "actual_departure": "2026-06-08T06:50:00+02:00",
+    "planned_platform": "5",
+    "actual_platform": "5",
+    "cancelled": false,
+    "ingested_at": "2026-06-08T06:51:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "heidelberg_karlsruhe",
+    "station_id": "8000156",
+    "station_name": "Heidelberg Hbf",
+    "destination_name": "Karlsruhe Hbf",
+    "train_name": "RE 19",
+    "train_category": "RE",
+    "planned_departure": "2026-06-12T18:21:00+02:00",
+    "actual_departure": "2026-06-12T18:27:00+02:00",
+    "planned_platform": "6",
+    "actual_platform": "6",
+    "cancelled": false,
+    "ingested_at": "2026-06-12T18:28:00+02:00",
+    "source": "transport.rest"
   },
   {
     "route_id": "frankfurt_cologne",
@@ -88,6 +235,38 @@
     "actual_departure": "2026-06-08T18:14:00+02:00",
     "planned_platform": "7",
     "actual_platform": "7",
-    "cancelled": false
+    "cancelled": false,
+    "ingested_at": "2026-06-08T18:15:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "frankfurt_cologne",
+    "station_id": "8000105",
+    "station_name": "Frankfurt Main Hbf",
+    "destination_name": "Cologne Hbf",
+    "train_name": "ICE 1022",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-10T07:09:00+02:00",
+    "actual_departure": "2026-06-10T07:09:00+02:00",
+    "planned_platform": "6",
+    "actual_platform": "6",
+    "cancelled": false,
+    "ingested_at": "2026-06-10T07:10:00+02:00",
+    "source": "transport.rest"
+  },
+  {
+    "route_id": "frankfurt_cologne",
+    "station_id": "8000105",
+    "station_name": "Frankfurt Main Hbf",
+    "destination_name": "Cologne Hbf",
+    "train_name": "ICE 1024",
+    "train_category": "ICE",
+    "planned_departure": "2026-06-12T19:09:00+02:00",
+    "actual_departure": "2026-06-12T19:20:00+02:00",
+    "planned_platform": "8",
+    "actual_platform": "8",
+    "cancelled": false,
+    "ingested_at": "2026-06-12T19:21:00+02:00",
+    "source": "transport.rest"
   }
 ]

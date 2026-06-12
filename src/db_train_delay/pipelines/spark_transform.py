@@ -12,6 +12,7 @@ def build_silver_events(raw_events: DataFrame) -> DataFrame:
     return (
         raw_events.withColumn("planned_departure_ts", f.to_timestamp("planned_departure"))
         .withColumn("actual_departure_ts", f.to_timestamp("actual_departure"))
+        .withColumn("ingested_at_ts", f.to_timestamp("ingested_at"))
         .withColumn(
             "delay_minutes",
             f.when(f.col("cancelled"), None).otherwise(
@@ -34,6 +35,10 @@ def build_silver_events(raw_events: DataFrame) -> DataFrame:
         .withColumn("service_date", f.to_date("planned_departure_ts"))
         .withColumn("weekday", f.date_format("planned_departure_ts", "EEEE"))
         .withColumn("is_weekend", f.dayofweek("planned_departure_ts").isin([1, 7]))
+        .withColumn(
+            "event_id",
+            f.concat_ws("|", "route_id", "station_id", "train_name", "planned_departure"),
+        )
     )
 
 
@@ -67,6 +72,18 @@ def build_route_reliability(silver_events: DataFrame, routes: DataFrame) -> Data
         .withColumn(
             "platform_change_rate_pct",
             f.round(f.col("platform_changes") / f.col("event_count") * 100, 2),
+        )
+        .withColumn(
+            "on_time_rate_pct",
+            f.round(
+                f.greatest(
+                    f.lit(0),
+                    f.col("event_count") - f.col("delayed_events") - f.col("cancellations"),
+                )
+                / f.col("event_count")
+                * 100,
+                2,
+            ),
         )
         .withColumn(
             "delay_per_100_km",

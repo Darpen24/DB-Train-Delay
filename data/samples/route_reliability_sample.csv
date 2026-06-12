@@ -1,7 +1,7 @@
-route_id,origin_name,destination_name,route_type,train_category_focus,distance_km,event_count,avg_delay_minutes,median_delay_minutes,delayed_events,cancellations,platform_changes,delay_frequency_pct,cancellation_rate_pct,platform_change_rate_pct,delay_per_100_km,reliability_score
-mannheim_heidelberg,Mannheim Hbf,Heidelberg Hbf,short,RE/RB/S,21,2,2.0,2.0,0,0,0,0.0,0.0,0.0,9.52,100.0
-frankfurt_cologne,Frankfurt Main Hbf,Cologne Hbf,ice,ICE,180,1,5.0,5.0,1,0,0,100.0,0.0,0.0,2.78,55.0
-mannheim_frankfurt,Mannheim Hbf,Frankfurt Main Hbf,medium,ICE/IC/RE,72,1,13.0,13.0,1,0,1,100.0,0.0,100.0,18.06,40.0
-heidelberg_karlsruhe,Heidelberg Hbf,Karlsruhe Hbf,regional,RE/RB/S,55,1,8.0,8.0,1,0,1,100.0,0.0,100.0,14.55,40.0
-mannheim_berlin,Mannheim Hbf,Berlin Hbf,long,ICE,624,1,26.0,26.0,1,0,0,100.0,0.0,0.0,4.17,55.0
-munich_hamburg,Munich Hbf,Hamburg Hbf,long,ICE,775,1,,0.0,0,1,0,0.0,100.0,0.0,0.0,60.0
+route_id,origin_name,destination_name,route_type,train_category_focus,distance_km,event_count,avg_delay_minutes,median_delay_minutes,delayed_events,cancellations,platform_changes,delay_frequency_pct,cancellation_rate_pct,platform_change_rate_pct,on_time_rate_pct,delay_per_100_km,reliability_score
+mannheim_heidelberg,Mannheim Hbf,Heidelberg Hbf,short,RE/RB/S,21,4,3.0,3.0,1,0,1,25.0,0.0,25.0,75.0,14.29,85.0
+frankfurt_cologne,Frankfurt Main Hbf,Cologne Hbf,ice,ICE,180,3,5.333333333333333,5.0,2,0,0,66.67,0.0,0.0,33.33,2.96,70.0
+heidelberg_karlsruhe,Heidelberg Hbf,Karlsruhe Hbf,regional,RE/RB/S,55,3,4.666666666666667,6.0,2,0,1,66.67,0.0,33.33,33.33,8.48,65.0
+munich_hamburg,Munich Hbf,Hamburg Hbf,long,ICE,775,2,12.0,12.0,1,1,0,50.0,50.0,0.0,0.0,1.55,57.5
+mannheim_berlin,Mannheim Hbf,Berlin Hbf,long,ICE,624,3,16.333333333333332,18.0,3,0,0,100.0,0.0,0.0,0.0,2.62,55.0
+mannheim_frankfurt,Mannheim Hbf,Frankfurt Main Hbf,medium,ICE/IC/RE,72,3,11.0,11.0,2,1,1,66.67,33.33,33.33,0.0,15.28,51.67

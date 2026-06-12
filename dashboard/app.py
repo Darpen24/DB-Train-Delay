@@ -31,7 +31,13 @@ route_types = sorted(df["route_type"].dropna().unique())
 selected_route_types = st.sidebar.multiselect("Route type", route_types, default=route_types)
 selected_metric = st.sidebar.selectbox(
     "Ranking metric",
-    ["reliability_score", "avg_delay_minutes", "cancellation_rate_pct", "delay_per_100_km"],
+    [
+        "reliability_score",
+        "avg_delay_minutes",
+        "cancellation_rate_pct",
+        "delay_per_100_km",
+        "on_time_rate_pct",
+    ],
     index=0,
 )
 filtered = df[df["route_type"].isin(selected_route_types)].copy()
@@ -40,6 +46,7 @@ for column in [
     "delay_frequency_pct",
     "cancellation_rate_pct",
     "delay_per_100_km",
+    "on_time_rate_pct",
     "reliability_score",
 ]:
     filtered[column] = pd.to_numeric(filtered[column], errors="coerce")
@@ -47,7 +54,7 @@ for column in [
 metric_cols = st.columns(4)
 metric_cols[0].metric("Routes", len(filtered))
 metric_cols[1].metric("Avg delay", f"{filtered['avg_delay_minutes'].mean():.1f} min")
-metric_cols[2].metric("Delay frequency", f"{filtered['delay_frequency_pct'].mean():.1f}%")
+metric_cols[2].metric("On-time rate", f"{filtered['on_time_rate_pct'].mean():.1f}%")
 metric_cols[3].metric("Cancellation rate", f"{filtered['cancellation_rate_pct'].mean():.1f}%")
 
 top_route = filtered.sort_values("reliability_score", ascending=False).iloc[0]
